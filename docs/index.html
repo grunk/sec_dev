@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Design patterns - CESI</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/league.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
+		<header class="left" style="position: absolute; left: 10px;"></header>
+		<header class="right" style="position: absolute; right: 10px;"></header>
+		<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
+		<!-- INTRO -->
+		<div class="slides">
+			<section data-background-transition="zoom">
+				<section data-background="img/splash_code.jpg">
+					<h1 class="bandeau">Sécurité dans les projets de développement</h1>
+				</section>
+				<section>
+					<h1>Retrouvez ce cours</h1>
+					https://grunk.github.io/sec_dev/
+				</section>
+				<section>
+					<h2>Qui suis-je ?</h2>
+					<p>Olivier ROGER</p>
+					<p>Développeur & Architecte @ Pryntec</p>
+					<p>+10 XP</p>
+					<p>Expert PHP, Senior Android, JS, C++, SQL, etc ...</p>
+					<p>Dév web, Informatique industrielle, vidéo surveillance, ...</p>
+					<p>En ligne : oroger.fr / grunk @ dvp | stackoverflow | github</p>
+					<aside class="notes">
+						Prynel : R&D Vidéo Surveillance : ~ 15 employés. Majorité de C++. TEB => Acteur majeur VS france
+					</aside>
+				</section>
+				<section>
+					<h2>Tour de table</h2>
+					<aside class="notes">Prénom + background de chacun</aside>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+		Reveal.configure({ pdfMaxPagesPerSlide: 1,pdfSeparateFragments:false })
+	</script>
+</body>
+
+</html>
