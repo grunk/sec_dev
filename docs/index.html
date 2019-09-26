@@ -90,7 +90,7 @@
 				</section>
 				<section>
 					<h2>Qu'est ce qu'une vulnérabilité ?</h2>
-					<h3 class="fragment">Un défaut dans un logiciel</h3>
+					<h3 class="fragment" style="color:#ed4a34;">Un défaut dans un logiciel</h3>
 					<ul>
 						<li class="fragment">Elevation de privilège</li>
 						<li class="fragment">Compromission de données</li>
@@ -101,8 +101,18 @@
 					</aside>
 				</section>
 				<section>
-					<h2>Sources de vulnérabilité</h2>
-					<!-- TODO (voir https://www.silicon.fr/programmation-erreurs-securite-logiciels-261177.html)-->
+					<h2>TOP 3</h2>
+					<ol>
+						<li class="fragment">Buffer overflow (CWE-119)</li>
+						<li class="fragment">XSS (CWE-79)</li>
+						<li class="fragment">IIV (CWE-20)</li>
+					</ol>
+					<aside class="notes">
+						1- Principalement dans le langages sans gestion de mémoire (C/C++)<br />
+						=> Execution de code malicieux , crash, accès à des données non autorisé<br /><br />
+						2- Pricipalement vol de données (cookie). Execution de code possible si lié à d'autre failles<br /><br />
+						3- Improper input validation : Crash , accès à des données.
+					</aside>
 				</section>
 				<section>
 					<h2>Avantage du S-SDLC</h2>
