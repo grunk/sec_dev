@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Design patterns - CESI</title>
+	<title>Sécurité dans les projets de développement</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/league.css">
@@ -55,6 +55,101 @@
 				<section>
 					<h2>Tour de table</h2>
 					<aside class="notes">Prénom + background de chacun</aside>
+				</section>
+			</section>
+			<!-- S-SDLC-->
+			<section>
+				<section data-background="img/lc.png">
+					<h1>S-SDLC</h1>
+					<aside class="notes">Secure Software development life cycle</aside>
+				</section>
+				<section>
+					<h2>Avant</h2>
+					<ul>
+						<li class="fragment">Cycle traditionnel (cascade, V, agile, ...)</li>
+						<li class="fragment">Sécurité au moment des tests finaux</li>
+					</ul>
+					<img width="600" height="400" src="img/cascade.svg" />
+					<aside class="notes">Le problème : bcp de vulnérabilités trouvées à la fin du projet voir pas trouvée du tt</aside>
+				</section>
+				<section>
+					<h2>Définition S-SDLC</h2>
+					<ul>
+						<li class="fragment">Méthodologie globale</li>
+						<li class="fragment">Standard pour le développement</li>
+						<li class="fragment">Défini les bonnes pratiques</li>
+						<li class="fragment">Réduit les vulnérabilités</li>
+					</ul>
+					<aside class="notes">
+						Identique à cycle de dév classique (V , agile) sauf qu'on intègre
+						* Méthodologie globale pour un cycle de dev sure <br />
+						* Le but est de tendre vers un standard<br />
+						* Bonne pratique de développement sécurisé en fonction de la phase du projet (design, codage, maintenance)
+						* Doit conduire à une réduction des vulnérabilités
+					</aside>
+				</section>
+				<section>
+					<h2>Qu'est ce qu'une vulnérabilité ?</h2>
+					<h3 class="fragment">Un défaut dans un logiciel</h3>
+					<ul>
+						<li class="fragment">Elevation de privilège</li>
+						<li class="fragment">Compromission de données</li>
+					</ul>
+					<aside class="notes">
+						* Je peux voir ou faire quelque chose sans en avoir les droits<br />
+						* Accès à des données (lecture ou ecriture) par une voie non prévue (outrepasser un paywall par ex)
+					</aside>
+				</section>
+				<section>
+					<h2>Sources de vulnérabilité</h2>
+					<!-- TODO (voir https://www.silicon.fr/programmation-erreurs-securite-logiciels-261177.html)-->
+				</section>
+				<section>
+					<h2>Avantage du S-SDLC</h2>
+					<ul>
+						<li class="fragment">Détection/Résolution des vulnérabilités relativement tôt</li>
+						<li class="fragment">Réduction des coûts</li>
+						<li class="fragment">Prise de conscience de la sécurité par toutes les parties prenantes</li>
+						<li class="fragment">Globalement moins de risque pour la société</li>
+					</ul>
+					<aside class="notes">
+						* On y a pensé en amont, on peut donc les résourdres vite.<br />
+						* Plus facile = moins cher<br />
+						* Ne concerne plus que les développeur mais aussi tout l'opérationnel<br />
+						* Moins de failles = moins de risque de mise en cause pour l'entreprise (ex botnet dahua : mauvaise réput) 
+					</aside>
+				</section>
+				<section>
+					<h2>Comment ca marche ?</h2>
+					<p>Ajout des notions de sécurité dans un process de développement</p>
+					<p>Ex : écrire les contraintes sécuritaires en même temps que le besoin fonctionnel</p>
+				</section>
+				<section>
+					<h2>Exercice</h2>
+					<h3>Page de login</h3>
+					<ul>
+						<li>Connexion identifiant / mot de passe</li>
+						<li>Email de confirmation</li>
+						<li>Récupération de mot de passe</li>
+						<li>Connexion "permanante"</li>
+						<!-- EXERCICE : client veux une page de login-->
+					</ul>
+					<aside class="notes">
+						Par groupe<br />
+						* Longueur mdp et identifiant<br />
+						* Stockage mdp (hash, bcrypt)<br />
+						* Ne pas renvoyer le mdp par mail<br />
+						* Durée de validité limité récup mdp<br />
+						* Attention Contenu cookie connexion permanante<br />
+					</aside>
+				</section>
+				<section>
+					<h2>Comment le mettre en place ?</h2>
+					<ul>
+						<li class="fragment">Formez toutes les parties prenantes</li>
+						<li class="fragment">Utilisez l'existant (MS SDL, NIST 800-64, OWASP CLASP</li>
+						<li>TODO : TOOLING static anylysis , pen test, etc ...</li>
+					</ul>
 				</section>
 			</section>
 		</div>
