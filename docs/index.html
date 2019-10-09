@@ -135,6 +135,63 @@
 					<p>Ex : écrire les contraintes sécuritaires en même temps que le besoin fonctionnel</p>
 				</section>
 				<section>
+					<h2>Comment le mettre en place ?</h2>
+					<ul>
+						<li class="fragment">Formez toutes les parties prenantes</li>
+						<li class="fragment">Utilisez l'existant (MS SDL, NIST 800-64, OWASP CLASP)</li>
+						<li class="fragment">S'outiller correctement et mutualiser</li>
+						<li class="fragment">TODO : TOOLING static anylysis , pen test, etc ...</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Comment le mettre en place ? : Outils</h2>
+					<ul>
+						<li class="fragment">DevOps : Gitlab / Github / Jenkis / Kubernete ...</li>
+						<li class="fragment">Analyse statique : CppCheck, Lint, SonarQube, ...</li>
+						<li class="fragment">Pen test / Audit : Nessus, nmap, Kali Linux </li>
+					</ul>
+					<aside class="notes">
+						L'important est de mutualiser les outils entre toutes les parties prenantes pour réduire voir éliminer les problème de communication.
+					</aside>
+				</section>
+			</section>
+			<!-- Sécurité dans les différentes étapes-->
+			<section >
+				<section data-background="img/sec.jpg">
+					<h1>Sécurité dans les différentes étapes du processus</h1>
+				</section>
+				<section>
+					<h2>Les étapes</h2>
+					<ul>
+						<li class="fragment">GO / NO GO</li>
+						<li class="fragment">Conception</li>
+						<li class="fragment">Tests unitaires *</li>
+						<li class="fragment">Développement</li>
+						<li class="fragment">Tests fonctionels *</li>
+						<li class="fragment">Audit externe</li>
+					</ul>
+					<aside class="notes">
+						* De plus en plus non séparé avec l'intégration continue (Ci/CD)
+					</aside>
+				</section>
+				<section>
+					<h2>GO/NO GO</h2>
+					TODO : Estimation des risques, est on capable ? est ce qu'on se met en péril etc ...
+					<aside class="notes">
+						
+					</aside>
+				</section>
+				<section>
+					<h2>Conception</h2>
+					TODO : 
+					* Prendre l'utilisateur pour un hostile (NTUI)
+					* Toutes conneries possible sera faites
+					* Identifier et isoler les risques (saisie, réseau, db, ...)
+					<aside class="notes">
+						
+					</aside>
+				</section>
+				<section>
 					<h2>Exercice</h2>
 					<h3>Page de login</h3>
 					<ul>
@@ -146,20 +203,38 @@
 					</ul>
 					<aside class="notes">
 						Par groupe<br />
+						* Transfert des infos sécurisé (https)
 						* Longueur mdp et identifiant<br />
 						* Stockage mdp (hash, bcrypt)<br />
 						* Ne pas renvoyer le mdp par mail<br />
 						* Durée de validité limité récup mdp<br />
 						* Attention Contenu cookie connexion permanante<br />
+						* Cookie httponly, eviter localstorage.<br />
 					</aside>
 				</section>
+
 				<section>
-					<h2>Comment le mettre en place ?</h2>
-					<ul>
-						<li class="fragment">Formez toutes les parties prenantes</li>
-						<li class="fragment">Utilisez l'existant (MS SDL, NIST 800-64, OWASP CLASP</li>
-						<li>TODO : TOOLING static anylysis , pen test, etc ...</li>
-					</ul>
+					<h2>Tests</h2>
+					TODO (avec exemple ?)
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h2>Développement</h2>
+					TODO (avec exemple ?)
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h2>Audit</h2>
+					TODO (avec exemple ?)
+					<aside class="notes">
+						
+					</aside>
 				</section>
 			</section>
 		</div>
